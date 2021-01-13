@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 import scipy.signal as sp
 import scipy.fft as sf
 
-from pydub import AudioSegment
-sound = AudioSegment.from_wav("./sounds/s5.wav")
-sound = sound.set_channels(1)
-sound.export("./sounds/s5_mono.wav", format="wav")
+# from pydub import AudioSegment
+# sound = AudioSegment.from_wav("./sounds/s5.wav")
+# sound = sound.set_channels(1)
+# sound.export("./sounds/s5_mono.wav", format="wav")
 
-sample_wave_file = "./sounds/s5_mono.wav"
+sample_wave_file = "./sounds/tomomi.wav"
 
 wav = wave.open(sample_wave_file)
 
