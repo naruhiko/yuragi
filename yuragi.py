@@ -9,7 +9,7 @@ import scipy.fft as sf
 # sound = sound.set_channels(1)
 # sound.export("./sounds/s5_mono.wav", format="wav")
 
-sample_wave_file = "./sounds/tomomi.wav"
+sample_wave_file = "./sounds/s5_mono.wav"
 
 wav = wave.open(sample_wave_file)
 
@@ -95,8 +95,9 @@ def plot_FFT(t, x, fq, F_abs_amp, output_FN, IDN, final_graph, y_label, y_unit):
     title2 = "freq_" + output_FN[:-4]
     plt.xlabel('freqency(Hz)')
     plt.ylabel(y_label+"["+y_unit+"/rtHz]")
-    plt.xscale("log")
+    # plt.xscale("log")
     plt.yscale("log")
+    plt.xlim(0,10000)
     plt.plot(fq, F_abs_amp)
     plt.title(title2)
  
